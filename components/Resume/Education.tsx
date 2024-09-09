@@ -22,7 +22,7 @@ const Education = () => {
               Heimdal vidrående skole
             </h4>
             <p className="text-gray-600">High School Diploma, RealFag</p>
-            <p className="text-sm text-gray-500">Graduated: 2020</p>
+            <p className="text-sm text-gray-500">Graduated: 2023</p>
           </li>
         </ul>
       </div>
