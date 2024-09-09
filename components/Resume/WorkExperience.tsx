@@ -2,7 +2,7 @@ import React from "react";
 
 const WorkExperience = () => {
   return (
-    <section id="WorkExperience"className="bg-gray-50 py-8 px-6">
+    <section id="WorkExperience" className="bg-gray-50 py-8 px-6">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-3xl font-bold text-gray-900 mb-6">
           Work Experience
@@ -28,7 +28,7 @@ const WorkExperience = () => {
             <p className="text-gray-600">NTNU StartGjøvik - Gjøvik</p>
             <p className="text-sm text-gray-500">September 2024 - Present</p>
             <p className="text-gray-700 mt-2">
-              Maintained and developed the organization's website using HTML,
+              Maintained and developed the organization&apos;s website using HTML,
               Tailwind CSS, and React. Collaborated with the team to learn new
               technologies and meet organizational needs.
             </p>
@@ -76,3 +76,4 @@ const WorkExperience = () => {
 };
 
 export default WorkExperience;
+
