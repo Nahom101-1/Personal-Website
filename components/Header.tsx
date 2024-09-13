@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ href, label, primary }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className={`inline-block px-6 py-3 text-lg font-medium rounded-md shadow-lg transition-colors duration-300 ${
+    className={`inline-block px-6 py-3 text-base md:text-lg font-medium rounded-md shadow-lg transition-colors duration-300 ${
       primary
         ? "bg-purple-500 text-white hover:bg-purple-600"
         : "bg-transparent text-purple-500 border border-purple-500 hover:bg-purple-100"
@@ -43,20 +43,20 @@ const ScrollDownArrow = () => (
 const Header: React.FC = () => {
   return (
     <header className="bg-gray-900 min-h-screen flex items-center justify-center text-white relative">
-      <div className="flex flex-col lg:flex-row items-center justify-between w-10/12 max-w-7xl space-y-10 lg:space-y-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-11/12 max-w-7xl space-y-10 lg:space-y-0 lg:space-x-10">
         {/* Left Section */}
-        <div className="lg:w-1/2 text-left">
-          <h1 className="text-5xl font-bold mb-2">Nahom Berhane</h1>
-          <span className="inline-block bg-purple-500 text-sm font-medium text-white px-4 py-1 rounded-md mb-4">
+        <div className="lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">Nahom Berhane</h1>
+          <span className="inline-block bg-purple-500 text-sm md:text-base font-medium text-white px-4 py-1 rounded-md mb-4">
             Aspiring Developer
           </span>
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-300 mb-8 text-sm md:text-base">
             I am a second-year programming student at NTNU Gjøvik, passionate
             about building software and eager to learn. As an aspiring
             developer, I am committed to expanding my skills and contributing to
             innovative projects that make a real impact.
           </p>
-          <div className="space-x-4">
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
             <Button href="/assets/maincv.pdf" label="Download Resume" primary />
             <Button
               href="https://www.linkedin.com/in/nahom-berhane-19ab84233"
@@ -65,9 +65,9 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Section: Image Placeholder */}
+        {/* Right Section: Image */}
         <div className="lg:w-1/2 flex justify-center">
-          <div className="relative w-64 h-64 rounded-lg bg-gray-100 flex items-center justify-center">
+          <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-lg bg-gray-100 flex items-center justify-center">
             <Image
               src="/assets/profile.jpg"
               alt="Nahom Berhane"
@@ -77,8 +77,9 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+
       <footer className="absolute bottom-5 flex flex-col justify-center items-center">
-        <h3 className="text-2xl font-semibold mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-4">
           Scroll down to learn more
         </h3>
         <ScrollDownArrow />
