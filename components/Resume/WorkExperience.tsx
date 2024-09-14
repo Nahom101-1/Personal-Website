@@ -35,7 +35,7 @@ const WorkExperience = () => {
           </li>
           <li className="bg-white rounded-lg shadow-md p-6 mb-4">
             <h4 className="text-xl font-semibold text-gray-800">
-              Bread maker
+              Baker Assistant
             </h4>
             <p className="text-gray-600">Godman Bakery - Trondheim</p>
             <p className="text-sm text-gray-500">May 2023 - August 2023</p>
