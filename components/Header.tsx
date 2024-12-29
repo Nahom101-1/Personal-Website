@@ -1,89 +1,39 @@
+"use client";
+
+import Button from "@/app/utils/buttons";
+import { scrollByAmount } from "@/app/utils/utils";
 import React from "react";
-import Image from "next/image";
+import { FaArrowDown } from "react-icons/fa";
 
-interface ButtonProps {
-  href: string;
-  label: string;
-  primary?: boolean;
-}
+const Header = () => {
+  const handleScroll = () => scrollByAmount(window.innerHeight-25);
 
-// Simple Button component
-const Button: React.FC<ButtonProps> = ({ href, label, primary }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`inline-block px-6 py-3 text-base md:text-lg font-medium rounded-md shadow-lg transition-colors duration-300 ${
-      primary
-        ? "bg-purple-500 text-white hover:bg-purple-600"
-        : "bg-transparent text-purple-500 border border-purple-500 hover:bg-purple-100"
-    }`}
-  >
-    {label}
-  </a>
-);
-
-const ScrollDownArrow = () => (
-  <svg
-    className="animate-bounce w-6 h-6 text-white"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 14l-7 7m0 0l-7-7m7 7V3"
-    />
-  </svg>
-);
-
-const Header: React.FC = () => {
   return (
-    <header className="bg-gray-900 min-h-screen flex items-center justify-center text-white relative">
-      <div className="flex flex-col lg:flex-row items-center justify-between w-11/12 max-w-7xl space-y-10 lg:space-y-0 lg:space-x-10">
-        {/* Left Section */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Nahom Berhane</h1>
-          <span className="inline-block bg-purple-500 text-sm md:text-base font-medium text-white px-4 py-1 rounded-md mb-4">
-            Aspiring Developer
-          </span>
-          <p className="text-gray-300 mb-8 text-sm md:text-base">
-            I am a second-year programming student at NTNU Gjøvik, passionate
-            about building software and eager to learn. As an aspiring
-            developer, I am committed to expanding my skills and contributing to
-            innovative projects that make a real impact.
-          </p>
-          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-            <Button href="/assets/maincv.pdf" label="Download Resume" primary />
-            <Button
-              href="https://www.linkedin.com/in/nahom-berhane-19ab84233"
-              label="LinkedIn"
-            />
-          </div>
-        </div>
+    <header className="bg-[#EFE3C2] min-h-screen relative flex flex-col items-center justify-center text-[#3E7B27]">
+      <div className="text-center space-y-6 text-[#123529]">
+        {/* Title Section */}
+        <h1 className="text-5xl font-bold">Nahom Berhane</h1>
+        <span className="inline-block text-sm font-medium text-[#123529]">
+          Aspiring Developer
+        </span>
 
-        {/* Right Section: Image */}
-        <div className="lg:w-1/2 flex justify-center">
-          <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-lg bg-gray-100 flex items-center justify-center">
-            <Image
-              src="/assets/profile.jpg"
-              alt="Nahom Berhane"
-              className="rounded-lg object-cover"
-              layout="fill"
-            />
-          </div>
+        {/* Buttons */}
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+          <Button href="/assets/maincv.pdf" label="Download Resume" primary />
+          <Button
+            href="https://www.linkedin.com/in/nahom-berhane-19ab84233"
+            label="LinkedIn"
+          />
         </div>
       </div>
 
-      <footer className="absolute bottom-5 flex flex-col justify-center items-center">
-        <h3 className="text-xl md:text-2xl font-semibold mb-4">
-          Scroll down to learn more
-        </h3>
-        <ScrollDownArrow />
-      </footer>
+      {/* Scroll Down Button */}
+      <button 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center"
+        onClick={handleScroll}
+      >
+        <FaArrowDown className="w-6 h-6 animate-bounce text-[#123524] hover:text-[#85A947] transition-all" />
+      </button>
     </header>
   );
 };
