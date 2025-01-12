@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ButtonProps } from "../../../types/types";
+import { ButtonProps } from "../../types/types";
 
 
 const Button = ({ href, label, primary }: ButtonProps) => (

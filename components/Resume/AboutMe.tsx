@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress'; 
-import { sanityClient } from '../../sanity'; // Ensure sanityClient is correctly configured and exported
-import { AboutMeTypes } from '../../types/types'; // Import the type for 'about'
+import { sanityClient } from '../../sanity'; 
+import { AboutMeTypes } from '../../types/types'; 
 const AboutMe = () => {
   const [about, setAbout] = useState<AboutMeTypes | null>(null);
   useEffect(() => {
@@ -10,7 +10,7 @@ const AboutMe = () => {
       .fetch(`*[_type == "about"]{title, description}`)
       .then((data) => {
         if (data && data.length > 0) {
-          setAbout(data[0]); // Assuming 'about' is a single object
+          setAbout(data[0]); 
         }
       })
       .catch((error) => {

@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "@/app/utils/buttons";
-import { scrollByAmount } from "@/app/utils/utils";
+import Button from "../app/utils/buttons";
+import { scrollByAmount } from "../app/utils/utils";
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 

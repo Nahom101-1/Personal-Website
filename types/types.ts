@@ -1,3 +1,4 @@
+//types for button component
 export interface ButtonProps{
     href:string;
     label: string;
@@ -5,7 +6,7 @@ export interface ButtonProps{
 }
 
 
-//tyoes for education 
+//tyoes for education schema
 export interface EducationTypes {
     institution: string;
     degree: string;
@@ -13,12 +14,13 @@ export interface EducationTypes {
     imageUrl: string;
   }
 
-//types for about me
+//types for about me schema
 export interface AboutMeTypes{
     description:string
     title:string
 }
 
+//types for wokr experience schema
 export interface workExperienceTypes{
     jobTitle:string
     company:string

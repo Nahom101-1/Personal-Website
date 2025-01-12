@@ -42,7 +42,6 @@ const Navbar = () => {
   };
   const letters: Array<keyof typeof iconsMap> = ["N", "A", "H", "O", "M"];
 
-  // Dynamic Styles
   const DynamicStyles = isScrolled
     ? "bg-[#EFE3C2] text-[#123524]"
     : "bg-[#123524] text-[#EFE3C2]";
@@ -119,7 +118,7 @@ const Navbar = () => {
               <li key={item.name} className="flex items-center space-x-2">
                 <a
                   href={`#${item.name.toLowerCase()}`}
-                  className="block text-lg flex items-center space-x-2 hover:text-[#3E7B27] transition-all duration-300"
+                  className="block text-lg items-center space-x-2 hover:text-[#3E7B27] transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>{item.icon}</span>
