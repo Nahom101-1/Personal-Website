@@ -1,11 +1,11 @@
 "use client";
 
-import Button from "../app/utils/buttons";
-import { scrollByAmount } from "../app/utils/utils";
+import Button from "./utils/buttons";
+import { scrollByAmount } from "./utils/utils";
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 
-const Header = () => {
+const Header = () => {  
   const handleScroll = () => scrollByAmount(window.innerHeight-25);
 
   return (
