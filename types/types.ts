@@ -32,3 +32,7 @@ export interface workExperienceTypes{
     imageUrl: string;
     institution: string;
 }
+
+// export interface ruleTypes{
+//     Rule:any
+// }

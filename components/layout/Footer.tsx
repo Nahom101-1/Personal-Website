@@ -16,7 +16,7 @@ const Footer = () => {
 
           <a
             href="mailto:nahomberhane101@gmail.com"
-            className="block text-sm hover:text-[#3E7B27] mt-2 hover:text-[#3E7B27] hover:scale-110 transition-transform"
+            className="block text-sm mt-2 hover:text-[#3E7B27] hover:scale-110 transition-transform"
           >
             nahomberhane101@gmail.com
           </a>

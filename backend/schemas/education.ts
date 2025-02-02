@@ -20,10 +20,6 @@ const education = {
         title: 'Graduation Year',
         type: 'number',
         description: 'The expected year of graduation.',
-        validation: (Rule:any) =>
-          Rule.min(1900).max(new Date().getFullYear() + 10).warning(
-            'Graduation year must be within a realistic range.'
-          ),
       },
       {
         name: 'image',
@@ -31,7 +27,6 @@ const education = {
         type: 'image',
         alt: 'Logo of the institution',
         description: 'Optional logo or image of the institution.',
-        options: { hotspot: true }, 
       },
     ],
   };

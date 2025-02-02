@@ -8,14 +8,12 @@ const experience = {
       title: 'JobTitle',
       type: 'string',
       description: 'The title of the job (e.g., Shop Assistant, IT Assistant).',
-      validation: (Rule:any) => Rule.required().error('Job title is required.'),
     },
     {
       name: 'company',
       title: 'Company',
       type: 'string',
       description: 'The name of the company or organization (e.g., Telia AS).',
-      validation: (Rule:any) => Rule.required().error('Company name is required.'),
     },
     {
       name: 'location',
@@ -28,7 +26,6 @@ const experience = {
       title: 'Start Date',
       type: 'date',
       description: 'The starting date of the job.',
-      validation: (Rule:any) => Rule.required().error('Start date is required.'),
     },
     {
       name: 'endDate',
@@ -47,7 +44,6 @@ const experience = {
       title: 'Description',
       type: 'text',
       description: 'Details about the role and responsibilities.',
-      validation: (Rule:any) => Rule.max(500).warning('Keep the description concise (under 500 characters).'),
     },
     {
       name: 'image',

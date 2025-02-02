@@ -25,11 +25,9 @@ const Navbar = () => {
 
   // Menu Items for Navigation
   const menuItems = [
-    { name: "Home", icon: <FaHome /> },
-    { name: "About", icon: <FaUserAlt /> },
-    { name: "Skills", icon: <FaLaptopCode /> },
-    { name: "Projects", icon: <FaProjectDiagram /> },
-    { name: "Contact", icon: <FaEnvelope /> },
+    { name: "Home", icon: <FaHome />, href: "/"},
+    { name: "Projects and course work", icon: <FaProjectDiagram />, href: "/projects"},
+    { name: "Contact", icon: <FaEnvelope />,href: "/contact"},
   ];
 
   // Mapping Letters to Icons
@@ -49,7 +47,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#EFE3C2] text-[#123524]" : "bg-[#123524] text-[#EFE3C2]"
+        isScrolled
+          ? "bg-[#EFE3C2] text-[#123524]"
+          : "bg-[#123524] text-[#EFE3C2]"
       } shadow-md`}
     >
       <nav className="container mx-auto px-8 py-4 flex justify-between items-center">
@@ -60,28 +60,26 @@ const Navbar = () => {
         >
           {letters.map((letter, index) => {
             const Icon = iconsMap[letter];
-            return (
-              <Icon
-                key={index}
-                className={`text-5xl ${DynamicStyles}`}
-              />
-            );
+            return <Icon key={index} className={`text-5xl ${DynamicStyles}`} />;
           })}
         </a>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-8 text-lg">
-          {menuItems.map((item) => (
-            <li key={item.name}>
-              <a
-                href={`#${item.name.toLowerCase()}`}
-                className="flex items-center space-x-2 hover:text-[#3E7B27] transition-all duration-300"
-              >
-                <span>{item.icon}</span>
-                <span>{item.name}</span>
-              </a>
-            </li>
-          ))}
+          {menuItems.map((item) => {
+            return (
+              <li key={item.name}>
+                <a
+                  href={`/${item.href.toLowerCase()}`}
+                  className="flex items-center space-x-2 hover:text-[#3E7B27] transition-all duration-300"
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.name}</span>
+                </a>
+              </li>
+            );
+          })}
+          ;
         </ul>
 
         {/* Mobile Menu Button */}
@@ -117,7 +115,8 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li key={item.name} className="flex items-center space-x-2">
                 <a
-                  href={`#${item.name.toLowerCase()}`}
+                  //bruk navn som link
+                  href={`#${item.href.toLowerCase()}`}
                   className="block text-lg items-center space-x-2 hover:text-[#3E7B27] transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
